@@ -1,0 +1,31 @@
+.download-section {
+    @include flex-center-column;
+    position: relative;
+    margin-top: -23px;
+    padding-bottom: 93px;
+    font-family: $g-main-font-family;
+
+    @include tablet-screen {
+        margin-top: -31px;
+    }
+
+    &__button {
+        padding: 13px 31px;
+        font-size: 18px;
+        line-height: 19px;
+
+        @include tablet-screen {
+            padding: 23px 31px;
+            min-width: 390px;
+        }
+    }
+    &__description {
+        font-size: 14px;
+        margin-top: 12px;
+        color: $g-text-color;
+
+        @include tablet-screen {
+            margin-top: 18px;
+        }
+    }
+}

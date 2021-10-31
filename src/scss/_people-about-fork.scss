@@ -1,0 +1,84 @@
+@import "variables";
+
+.people-about-fork {
+    font-family: $g-main-font-family;
+    min-height: 1610px;
+    background: url("./img/people-about-background.png") top no-repeat / auto 1610px $g-section-background;
+    @include flex-center-column;
+
+
+    @include mobile-screen {
+        background: url("./img/people-about-background-480.png") top no-repeat / cover $g-section-background;
+    }
+    @include tablet-screen {
+        min-height: 882px;
+    }
+
+    @include desktop-screen {
+        min-height: 769px;
+    }
+
+    &__heading {
+        margin-top: 57px;
+        margin-bottom: 41px;
+        color: $g-light-text-color;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 48px;
+        text-align: center;
+
+        @include tablet-screen {
+            margin-top: 86px;
+            margin-bottom: 85px;
+
+        }
+        @include desktop-screen {
+            margin-top: 108px;
+            margin-bottom: 75px;
+        }
+    
+    }
+    &__list {
+        margin-left: 20px;
+        margin-right: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 37px;
+
+        @include tablet-screen {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 63px;
+        }
+        @include desktop-screen {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 93px;
+        }
+    }
+    &__description {
+        font-family: $g-text-font-family;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        color: $g-minor-text-color;
+        margin: 15px 35px;
+        margin-top: 27px;
+
+        @include tablet-screen {
+            margin-bottom: 13px;
+        }
+        @include desktop-screen {
+            margin-top: auto;
+            margin-bottom: 3px;
+        }
+
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     margin-top: 22px;
+        //     width: 100%;
+        //     height: 2px;
+        //     border-bottom: 2px solid $g-line-color;
+        // }
+    
+    }
+}

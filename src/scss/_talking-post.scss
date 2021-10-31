@@ -1,0 +1,25 @@
+.talking-post {
+    @include flex-center-column;
+    justify-content: flex-start;
+    min-height: 147px;
+    // max-height: 171px;
+
+    @include tablet-screen {
+        justify-content: flex-start;
+    }
+
+    &__img-wrapper {
+        height: 78px;
+        @include flex-center;
+    }
+
+    &__text {
+        text-align: center;
+
+        font-family: $g-text-font-family;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 1.5rem;
+        color: $g-light-text-color;
+    }
+}

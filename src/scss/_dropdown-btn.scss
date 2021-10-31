@@ -1,0 +1,50 @@
+.dropdown-btn {
+    &__center-line {
+        transition: opacity $g-animation-speed;
+        opacity: 1; 
+
+        &--is-active {
+            opacity: 0;
+        }
+    }
+    &__top-line {
+        opacity: 1;
+        transition: transform $g-animation-speed, opacity $g-animation-speed 0ms;
+
+        &--is-active {
+            transform: translate(0, 9px);
+            opacity: 0;
+        }
+    }
+    &__bottom-line {
+        opacity: 1;
+        transition: transform $g-animation-speed, opacity $g-animation-speed 0ms;
+
+        &--is-active {
+            transform: translate(0, -9px);
+            opacity: 0; 
+        }
+    }
+    &__left-line {
+        transition: opacity $g-animation-speed, transform $g-animation-speed $g-animation-speed;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        opacity: 0;
+
+        &--is-active {
+            transform: rotate(0);
+            opacity: 1;
+        }
+    }
+    &__right-line{
+        transition: opacity $g-animation-speed, transform $g-animation-speed $g-animation-speed;
+        transform: rotate(45deg);
+        transform-origin: center;
+        opacity: 0;
+
+        &--is-active {
+            transform: rotate(0);
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.fork-pricing {
+    font-family: $g-main-font-family;
+    min-height: 2124px;
+    background: url("./img/pricing-background.png") top no-repeat / auto 1610px $g-section-background;
+    
+    @include flex-center-column;
+
+    &__heading {
+        margin-top: 23px;
+        margin-bottom: 32px;
+        color: $g-light-text-color;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 3rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,174 @@
+.header {
+
+    background: url("./img/header-background-320.png") center no-repeat / auto 718px black;
+    min-height: 718px;
+    color: $g-light-text-color;
+    font-family: $g-main-font-family;
+
+    @include mobile-screen {
+        background: url("./img/header-background-480.png") center no-repeat / auto 800px black;
+    }
+
+    @include tablet-screen {
+        min-height: 800px;
+        background: url("./img/header-background-768.png") center no-repeat / auto 800px black;
+    }
+
+    &__wrapper {
+        padding: 32px 15px 30px 16px;
+        position: relative;
+        background-color: $g-header-background;
+
+        @include flex-center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include tablet-screen {
+            padding: 22px 20px 18px;
+        }
+        @include desktop-screen {
+            background-color: transparent;
+        }
+    }
+    &__buy-now-button {
+        padding: 11px 10px;
+        font-size: 15px;
+        line-height: 15px;
+        @include tablet-screen {
+            min-width: 145px;
+        }
+        @include desktop-screen {
+            order: 1;
+        }
+    }
+    &__dropdown-btn {
+        @include tablet-screen {
+          display: none;
+        }
+    }
+    &__nav {
+        position: absolute;
+        z-index: 1;
+        top: 103px;
+        right: 15px;
+
+        color: $g-light-text-color;
+        background: $g-dropdown-background;
+        font-weight: 400;
+        line-height: 36px;
+        opacity: 0;
+        font-size: 0;
+        transition: opacity 300ms, font-size 300ms 300ms;
+
+        &--is-active {
+            opacity: 1;
+            font-size: 26px;
+            display: block;
+        }
+
+        @include tablet-screen {
+            width: 100%;
+            @include flex-center;
+            position: static;
+            z-index: 0;
+            flex-wrap: wrap;
+
+            color: $g-highlignt-color;
+            background: $g-header-background;
+            font-weight: 700;
+            line-height: 18px;
+            visibility: unset;
+            opacity: 1;
+            font-size: 16px;
+            transition: none;
+
+        }
+        @include desktop-screen {
+            width: unset;
+            padding: 0;
+            margin-left: auto;
+            background-color: transparent;
+        }
+    }
+
+    &__nav::after {
+        content: "";
+        height: 14px;
+        display: block;
+        background: $g-dropdown-item-background;
+
+        @include tablet-screen {
+            display: none;
+            justify-content: center;
+            justify-self: end;
+        }
+    }
+    &__nav-item {
+        margin-bottom: 3px;
+        background: $g-dropdown-item-background;
+        cursor: pointer;
+        height: 0;
+        padding: 0 51px 0 37px;
+        transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), padding 300ms 300ms, height 300ms 300ms;
+
+        &:hover{
+            color: $g-highlignt-color;
+        }
+
+        &--is-active {
+            height: 100%;
+            padding: 29px 51px 21px 37px;
+        }
+
+        @include tablet-screen {
+            height: 100%;
+            margin: 0;
+            margin-top: 22px;
+            margin-left: 24px;
+            margin-right: 23px;
+            background-color: unset;
+            padding: 0;
+
+            &:hover{
+                color: $g-light-text-color;
+            }
+        }
+        @include desktop-screen {
+            margin-top: 0;
+            margin-right: 47px;
+        }
+    }
+    &__greeting {
+        @include flex-center-column;
+        padding: 50px 10px;
+        position: relative;
+
+        @include tablet-screen {
+            padding: 69px 10px;
+        }
+        
+    }
+    &__heading {
+        margin-bottom: 19px;
+        font-weight: bold;
+        font-size: 48px;
+    }
+    &__description {
+        color: $g-highlignt-color;
+        font-size: 18px;
+        text-align: center;
+        line-height: 24px;
+        margin-bottom: 14px;
+        min-height: 52px;
+
+        @include tablet-screen {
+            margin-bottom: 19px;
+        }
+    }
+    &__product-version {
+        font-size: 14px;
+        color: $g-text-color;
+        text-transform: uppercase;
+        min-height: 15px;
+    }
+}

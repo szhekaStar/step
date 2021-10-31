@@ -1,0 +1,23 @@
+.button {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 119px;
+
+    color: $g-light-text-color;
+    background-color: $g-highlignt-color;
+    border: 1px solid transparent;
+
+    font-family: $g-main-font-family;
+    font-weight: 700;
+    text-align: center;
+
+    &:hover {
+        color: $g-highlignt-color;
+        background-color: $g-light-text-color;
+        border: 1px solid $g-highlignt-color;
+        transition: background-color $g-animation-speed, color $g-animation-speed;
+    }
+}
